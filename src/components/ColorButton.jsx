@@ -6,11 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import { makeStyles } from '@mui/styles';
+import PropTypes from 'prop-types';
 import * as ColorTool from '../helpers/colorTool';
 import * as CommonTypes from '../helpers/commonTypes';
 import useTranslate from '../helpers/useTranslate';
@@ -163,7 +162,7 @@ ColorButton.propTypes = {
 };
 
 ColorButton.defaultProps = {
-  size: 24,
+  size: 53.13,
   borderWidth: 0,
   borderColor: undefined,
   forwardRef: undefined,

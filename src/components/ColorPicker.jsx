@@ -8,27 +8,28 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
-import TextField from '@mui/material/TextField';
 import Popover from '@mui/material/Popover';
+import TextField from '@mui/material/TextField';
 import { StylesProvider, createGenerateClassName, makeStyles } from '@mui/styles';
+import PropTypes from 'prop-types';
+import { useEffect, useRef, useState } from 'react';
 
-import ColorButton from './ColorButton';
-import ColorBox from './ColorBox';
 import * as ColorTool from '../helpers/colorTool';
-import uncontrolled from '../helpers/uncontrolled';
 import * as CommonTypes from '../helpers/commonTypes';
+import uncontrolled from '../helpers/uncontrolled';
 import useTranslate from '../helpers/useTranslate';
+import ColorBox from './ColorBox';
+import ColorButton from './ColorButton';
 
 const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'row',
     width: 'max-content',
+    alignItems: 'center',
   },
   colorpickerButton: {
-    margin: 6,
+    marginRight: 8,
   },
 });
 
