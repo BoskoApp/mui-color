@@ -90,14 +90,14 @@ const ColorPicker = ({
     if (onOpen) onOpen(false);
   };
 
-  const handleColorChange = newColor => {
+  const handleColorChange = (newColor) => {
     onChange(newColor);
     if (deferred) {
       handleClose();
     }
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     onChange(event.target.value);
   };
 

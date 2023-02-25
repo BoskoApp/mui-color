@@ -7,7 +7,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@mui/styles';
 import ColorButton from './ColorButton';
@@ -27,17 +26,19 @@ const useStyles = makeStyles({
   },
 });
 
-const ColorPalette = ({ size, borderWidth, palette, onSelect, disableAlpha }) => {
+const ColorPalette = ({
+  size, borderWidth, palette, onSelect, disableAlpha,
+}) => {
   const classes = useStyles();
   const { t } = useTranslate();
-  const handleSelectColor = name => {
+  const handleSelectColor = (name) => {
     const translatedName = t(name);
     if (onSelect) onSelect(translatedName, palette[name]);
   };
 
   return (
     <div className={classes.root}>
-      {Object.keys(palette).map(name => (
+      {Object.keys(palette).map((name) => (
         <ColorButton
           size={size}
           key={`${name}`}
